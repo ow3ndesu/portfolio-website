@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rhowen Francisco Enguerra" />
+    <meta
+      name="keywords"
+      content="Rhowen 'Owen' Enguerra's Personal and Portfolio Website"
+    />
+    <meta
+      name="description"
+      content="Rhowen 'Owen' Enguerra's Personal and Portfolio Website"
+    />
+    <meta property="og:image" content="img/logo.svg" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="A Personal and Portfolio Website built to showcase my enthusiam in Web Development"
+    />
+    <meta
+      property="og:title"
+      content="Rhowen 'Owen' Enguerra's Personal and Portfolio Website"
+    />
+    <meta property="og:url" content="enguerrarhowen.netlify.app" />
+    <link
+      rel="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAEHxJREFUeF7tXWuQFNUV/s7MrCIPRXHZFZGNPHYxxCoVNYaNcZfpXiAiRF01WKkUVkTRMmre+ovil+YNGA0RX0nFYAmomChod7Oou5uEGGKKyGNZERTDCmhAHgo7Myd1Zmd0gZnZ7pnunttr319Qe+89557zze17zj3nXEI/bPG4WRuNUl0qlRpLRDXMPBJANYBhAIZm/p1j5dQF8D4AHwDoIqKdzLwjEol0JpO8xbK0jv4mLgr6gjTNGEUUqQf4MgAXM/MFAAZ6tK7DRPQGgNcB+htzqs009Xc8ouXLtIEEQDxuTgUwlYh1AF/0RVL5iWxkJgPAasvSVpeZF8fkAwMATTOuZKZmInwDYNnGVWz7melZIl5umvoLKjJ4PE9KA6CxcU1dNJqcTYTvMKMyCALN8kiEPcx4NJmMPtHSMnmLqrwrCQBNM6YAmAvIr71ftOcALDZN/SXVVqMUAOLxl5qJIncB+KpqgnKJn1YAC0xTX+HSfCVPowQA4nFzOlHqHoDqS15RICbgNubI/Zal/aXc7JYVAJpmXAhgHoCZ5RZEmeivBDDfNPV/lYk+ygKAefM40t5u3cfMPy7XwlWiS0Q/mzQpfu/8+ZTymy/fAaDrL89gpp8DqPV7sYrT6yDiHxlG0/N+8ukrAHTdXMjMd/q5wKDRIqJFhqHJQdiX5gsA4nHzEiJeDOAiX1YVfCLrmWmuZWn/8HopngNA04w5AB72eiH9dP5bTFNf4uXaPAVAPG7+goh/4OUC+vvczPRLy9J+6NU6PQFAQ0NLrKIiuZSZm71i/PM0LxEt7+6Ozlq7tjHh9rpdB0BDwwvVsdhJy/qxN89tHdidr1UuwyxLe9/uADv9XAXA5MnWmEgk9SyA8+0QD/s4lsCGVCpy9Zo18bccj8wzwDUANDauqotGY+LaHOsWc+E8OSXQmUwmpre0THPlhtEVAGR++RIMESrfH9R2plKRqW7sBCUDIB43q4hYImLCbd8f5WepbEgkjjatXXtlVylkSwKAnPZjsURLeOArRQUljW1NJGKNpVgHJQFA181loalXkgJLHiwmomFo1xU7UdEACJ08xYrc/XGlOIuKAkDo3nVfiS7MWJTb2DEAMhc761xgOJzCZQkw06VOL5AcA0DTjH+Gt3oua8696dabpj7RyXSOABDe5zsRbXn6Oo0nsA2ATCSPxLCFTXEJEPFMu5FFtgAgMXxtbeamMIxLcc1/xl5Hfb12np0YQ1sA0HXzp2EAZ2CUn2ZUAk0NQ/tJX1z3CYBM6Pb6viYK/66kBC7qK+TcDgAkrenzGrevpFYdMLXSNPWC6XUFAdCTscN/dkAw7KqYBJjpqkIZSAUBoGkvt35+0rUU05xr7HCbaTblzbXMCwBNM64FsNw1PoqYaOjQk9DQUIXKygGgPj9WRRAAwAx0dX0My9qFw4eTxU2i+Cjm1HWWNSWnLgsB4LVyX/Oed95puPvu8Rg9eogvIk6lGB991I39+7uxc+chbNiwD5bVhX37jvpC30MiraapX55r/pwAyOTnl73cid8AyCWgo0dT2LbtANrb92DVqv8GGQxTc9UnyAcACewse3EGFQDQGxQffngUr776Pp555h3s2vWxhz9YT6Z+zjT1q4+f+QQAZMqybPaEBYeTqgaALPtyZnjxxfewcuW7gTo3JJPR8ceXqzkBAJpm3AfgHoe68qS7qgCQxXZ3p/DXv+7Fk09uw7ZtBz1ZvweT3m+a+r295z0BALpu7FalIJPKABAhigWxefN+PPpoJ/797/95oC93p5TCVYahD88LACnFBqDsZUuyDKoOgCyfW7cewGOPdeL116XAqPJteu8SdsfsAPG4+TgRz1ZlCXYAIGZbW9seHDrkLG3utNMq0v6FaFRWS5D/i99hyJAKxz4H2QneeONDLF7cofzngJmesCztpqyOjwGAphlSJ/e0IAFgz54jacHL6dyNJqCbPLka558/FDU1gxGL2fNAJRIprFnThSVLOhU3FWmfaWqnnwAAKb9KxKvcEKJbc9jZAdwGQG/eL798OGbMOAdf+tJQW0CQ3egPf9iWtg5Ubsw0LVvW9lN4x+PmAiL2rTSJHQGVGwDC48CBUVxzTQ1mzhyZ/kQUatlPwYMPbsGOHYfsLLEsfZhpoWVpd/d8/DJN04w3FSi8fIxAVABAlqGrrhqJG288F2eeeXJBpR082I0nn9yO5ct3lEW5NoluNE19wqcAkJLrAJTjWCUAiLBmzfoCrr++BoMHV+SVMzOjvX0vFizYpPhZADVS6j69A+i6NYs59Seb6PGtm2oAqKw8GbfeWgs5G0Qi+Q+H7713GA89tAXr1qlrFhJFbjSM+NIMANQs36YaAAT5jY1VmDOnFgKGfE2ulZ966m0sXbrdtx+LU0LZ8PEsANqYeZLTSbzuryIAzjrrFNx553hMnDgsr78gkWCsXv0elizZquxdARG1G4ZWnwaAphlyZPXqmZWicaIiAGQx8hkQq6CiIpJzbWIN/P3ve7Fo0SaImapoO2ya+iCSB5aI2JVyI24vVFUAiEVw001j0l7DfG3jxv1YuHCT0p5BZqqjpibrqlQq5Wt9WrtAURUAX/taFebOLXwO6Ow8gEWLNmPTpv12l+t7v0gkMoM0zfgegF/5Tt0GQVUBcPHFw3DXXeNRXX1K3lWII+iBBzarfkv4fdJ1cwGzWh7ArFRVBcDEiWfgu98dj7PPzn9sevfdQ1i4UG0AENFC2QEkWlQigJVrqgLgsssqcccdtaiqyr8DSBzhggVqfwIArBAAyDs2Sj7VoioAmppG4Oabx+L00/PfDUigyK9/rfYhEECbAECyfscr9/MHoCoAvvWt0bjhhhoMGJAOJjihiRm4fv2HaStA8eDRzaRp5i6A5V1d5ZqKAJAbwdtvr8UVV1TldQcnk5yODfjNbzYr6wjKKLtLdgBWTvMZhlQEwAUXyAGwDqNGDcortk8+SWLZsh3p2ADVWwgAhxoSL6A4gk4+ObcXUKYT79/vfteBV15xJ0rJIYuOuocAcCAucQDJ4U/uA/K1AH3/00sIAWATABMmDMWcOeMwYULhkMkjR5JYseIdPP64axXdbXJYXLcQADbkdumlw/Dtb49Bbe2pfUYMb936ER58sANvvinxteq3EAAFdCTxgN/85hcwZcoInHFG4VAwmebjj5PpULAgHP6yyxYA7AIQmoG9gFBXdyp0/SxccsmZ6e+9ndoEEgomEUASor5z52H1f/o9J4C0Gfi5dgSJV09MuiFDYhgxYiCqqgZg+HBJGLGXD5DV9NtvH8TDD28NSnZQlm1xBAXbFazCT+399z9JJ4lK/YCAtbQrONCXQeUWeICVL6JbEfjr4HIBQOz9t946gKef3o6WFvUdPrnklL0ODnRASDkAILZ+a+tu/PGPbwfowJdTUt8PfEiYnwCQBND//Gcfnn9+J157bbefpD2hlQ4JC3pQqCeSyTGp1AeSg54ov7+0dFCoLCbIYeF+KSOYdn5B6fSEhUsXXTcDmxgiV6/btx9M1+wppiWTwO7dn6C6ekA6DbxQypfQWrlyJx55ZGsxpJQac0xiiKovgfgZDyCRvrfcMg7nnju4oKL27j2C3//+LaxeHTib/5h1HZcaFiaHinSam0dh1qxzceqp+RM+pJ9c9Pz2tx3YsuUjpX7VTpg5Jjk0TA/vEZ1c/kjCh9wDxGL5Az4k909qC0sGcIDrC3+WHp45CIYFIgDIRdBtt9VC7v8LtQMHuvHUU9vx9NPKlVWwsxEcWyBCRoQlYj6TW1PTWZg9e2zBFHDpvX37oXToV0DKw326wJwlYsIiUcf+cG6+eVw6Azhf6Lf0DqppmLNIVM9nwPwfwIX3PjsbjEt9/LQCjmd55MiB6fOARANRgYAACQKRqmBSLTQgbb9p6p/qOPCFIr0sE/flL5+JW28dh3POyR8CLkoXHqRSqCkpFoq3vgpFBq5UrJcAEF1KBpCEhRUqDBUw0zB/qVhZSNCKRXsNAMkEmjt3HK64orpgsUi5KDKMXemQMFVNwz6LRWfMwUCVi/caACITMQnFNBQTMeCmYd/l4oP2YIQfABClT5s2ArNnj+kzOljl2EBbD0ZkdoHAPBnjFwDESyi+ga9//eyCaWHy8NS6dXvx0EMdqmUG23syJgOAKQAC8WiUXwAQudTUDMLtt9fhwgvPKBgqrqhpaP/RqAwIAvFsnJ8AELlMmlSZNg0lhLxQk2BRMQ0lTVyB5uzZOGE4Hn+pmSiyrJzMl9MRVGjdUiBCbg4HDYoVFI9Ct4bNpqmvyMWs0k/HqgoAKRMrXsL6+uEFE0gkSEVMQ7kvKJ9pWOTTsT27QHkfjxYbXGrz9jwdmwurnH7lUyJ0/U7HGj16ML7ylUoMHiy7QL7fEeODD46k6wSUq2JoSY9HZ84C4fPx5fwOlka7tOfjMwC4EMD60vgIR5dJAheZpv6vQrRtZUDquvlTZv5xmRYRki1CAkT0M8PQftLXUFsAmDePI21tpmQR1/Y1Yfh3JSTQUV+vnTd/PvUZKm0LALIkXX95BjOtVGJ5IRMFJUDEMw2jyVYBcNsA6AGBmi+LhHj4TALZcG+7MnEEgMyh8J8ALrJLIOznqwTWm6Y+0QlFxwCIx81LiHidEyJhX38kwEyXWpb2DyfUHAMgswvMAfCwE0JhX88lcItp6kucUikKAEIkHjd/QcQ/cEow7O++BJjpl5al/bCYmYsGQOZQuIyZm4shHI5xRwJEtNwwtOuKna0kADQ0tMRisUQLgK8Wy0A4riQJtCYSsca1axsTxc5SEgCEaEPDC9Wx2EkvAzi/WCbCcUVJYAMz6ZallVSgqGQACOuTJ1tjIpGURBCNLWop4SCnEuhMpSJT16yJl1yQ2BUACPeNjavqotHYX0IQONWl4/6dyWRiekvLNFfeenQNAL12AgkoDT8HjvVqa8CGVCpytRu//Cw1VwGQMQ+riFiKT4YHQ1s6td2pNZE4et3atVe6GmToOgB6DoYtsYqK5NLQRLSt3IIdxdTr7o7OKuW0n4+AJwDIEgudRaUDoBQnjx3qngJAGNA0I3Qb29FE7j5FuXedkPMcAJlzgVwgLQ5vEW2rZj0zzXV6sWN79l4dfQFAll4YT9C3ipze5/c9Y+EevgJAWMlEFv08DC87QTEdRPwju5E8pSreMzPQDmMSY9jebt0XBpr2SEsCOCdNit9rJ4bPjnyd9PF9B+jNnKYZEnI+D8BMJ0z3o74SYzm/r9BtL9dbVgD0MhenE6XuAUjJV8zdVwC3MUfutyxNXOdlbUoAICsBTTOuBXB3P/YitjKnFlrWFPGUKtGUAkAvIEh9grkAvqGElEpnQtLrFpum/lLpU7k7g5IAyC4xU65mNhG+w4xKd5fu7WxSkIkZjyaT0SdaWia7cnPnBcdKA+C4A+OVzNRMxFcDKPyArxeSsjUn7WPGc3IZZpr6C7aGlLlTYADQW05S1hbAVCLWAXyxzDLcyEyGlNSxLK3sZXWcyiKQADhuZxhFFKkH+DIAFzPzBVL53akgbPY/TERvAHgdoL8xp9pMU3/H5lgluwUeALmkKg9hRaNUl0qlxhJRDTOPzLyPPAygoQDneytZ7trl2e8PAHQR0U5m3hGJRDqTSd5iWVqHklosgan/A6betfvYv0niAAAAAElFTkSuQmCC"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&display=swap");
+    </style>
+    <title>Rhowen "Owen" Enguerra | Portfolio Website</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="main-container">
+        <nav class="header__navigation">
+          <a href="index.html" class="header__logo">
+            <img src="img/logo.svg" alt="logo" />
+          </a>
+
+          <ul class="header__list">
+            <li class="header__items">
+              <a class="header__link home-section active" href="#home-section">
+                Home
+              </a>
+            </li>
+            <li class="header__items">
+              <a class="header__link about-section" href="#about-section">
+                About
+              </a>
+            </li>
+            <li class="header__items">
+              <a class="header__link projects-section" href="#projects-section">
+                Projects
+              </a>
+            </li>
+            <li class="header__items">
+              <a class="header__link contact-section" href="#contact-section">
+                Contact
+              </a>
+            </li>
+          </ul>
+          <button class="header__button">
+            <span class="header__button-line"></span>
+            <span class="header__button-line"></span>
+            <span class="header__button-line"></span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="overlay hidden"></div>
+      <div class="mobile__nav">
+        <ul class="mobile__nav-list">
+          <li class="mobile__nav-items">
+            <a
+              class="mobile__nav-links home-section active"
+              href="#home-section"
+            >
+              Home
+            </a>
+          </li>
+          <li class="mobile__nav-items">
+            <a class="mobile__nav-links about-section" href="#about-section">
+              About
+            </a>
+          </li>
+          <li class="mobile__nav-items">
+            <a
+              class="mobile__nav-links projects-section"
+              href="#projects-section"
+            >
+              Projects
+            </a>
+          </li>
+          <li class="mobile__nav-items">
+            <a class="mobile__nav-links contact-section" href="#contact-section"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="section hero" id="home-section">
+        <div class="main-container">
+          <div class="grid-container">
+            <div class="hero__text">
+              <h1 class="hero__big-paragraph">Laravel Web Developer</h1>
+              <p class="hero__long-paragraph">
+                Hello, I'm Rhowen Enguerra. A Web Developer who is enthusiastic
+                about creating Web Applications using PHP Laravel.
+              </p>
+              <a
+                class="hero__cta button-primary"
+                href="rhowenfranciscoenguerra-cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                view resume (PDF)
+                <i class="fas fa-file-pdf hero__icon"></i>
+              </a>
+            </div>
+            <div class="hero__image">
+              <svg
+                viewBox="0 0 181 183"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                enable-background="new 0 0 181 183"
+                xml:space="preserve"
+                class="hero__img"
+              >
+                <g id="red">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M129.846 95.5823C134.494 95.8912 139.12 95.5577 143.653 96.8181C148.495 98.1641 154.555 98.4044 157.422 103.249C160.513 108.472 156.626 116.302 158.678 122.208C160.554 127.605 165.577 130.358 168.479 135.064C172.66 141.844 181.855 148.242 179.669 156.245C177.428 164.451 166.627 163.205 159.914 166.422C155.571 168.504 151.11 169.822 146.8 171.998C143.05 173.892 139.79 176.777 135.984 178.504C131.763 180.418 127.453 183.915 123.039 182.777C118.599 181.632 116.467 175.404 112.64 172.485C108.869 169.608 103.657 169.586 100.612 165.671C97.5738 161.764 96.4255 156.161 95.8371 150.878C95.2714 145.799 98.006 140.784 97.2778 135.734C96.273 128.766 90.7249 123.228 90.8306 116.159C90.9336 109.273 87.9718 96.34 92.65 92.3053C97.4742 88.1446 109.485 95.2922 115.43 94.9425C120.274 94.6575 125.004 95.2605 129.846 95.5823Z"
+                    fill="#B94D8E"
+                  />
+                </g>
+                <g id="pink">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M60.7942 91.0024C72.0362 91.26 77.4757 107.527 81.4655 119.507C84.0399 127.238 76.7391 134.95 78.1322 143.064C80.3624 156.054 98.1714 167.23 91.5216 178.082C85.3142 188.212 70.8275 176.042 60.7942 171.359C55.1605 168.73 53.5403 160.406 47.9223 157.733C32.4603 150.378 5.40085 161.582 1.31506 143.064C-2.37215 126.353 19.0084 95.9962 31.0001 85.5C39.8924 77.7165 49.5838 90.7456 60.7942 91.0024Z"
+                    fill="#4DB9A6"
+                  />
+                </g>
+                <g id="cyan">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M140.605 75.5916C136.64 74.4351 132.45 75.7595 128.424 74.8884C123.57 73.8381 117.105 86.4784 114.306 82.0417C111.321 77.3105 118.1 58.0091 115.635 52.9364C113.413 40.494 91.6144 45.2006 90.0499 37.9271C88.751 31.8882 106.221 29.6862 109.551 24.6504C112.587 20.0597 113.902 13.797 118.351 10.8698C122.802 7.94223 128.715 10.5129 133.668 8.78591C139.263 6.83528 143.391 -1.00444 149.175 0.12374C154.884 1.23747 156.289 9.91541 160.666 14.0523C164.628 17.7963 170.676 18.6521 173.71 23.3093C176.769 28.0054 176.534 34.2212 177.491 39.8804C178.505 45.883 181.468 52.1157 179.548 57.8509C177.622 63.6069 171.478 66.1127 167.325 70.2524C163.507 74.0584 160.991 80.4081 155.895 81.4263C150.524 82.4996 145.879 77.1303 140.605 75.5916Z"
+                    fill="#894DB9"
+                  />
+                </g>
+                <g id="purple">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M40.7994 0.194309C49.9606 1.60517 54.35 11.2243 59.6791 18.2467C63.3898 23.1365 62.4119 30.0439 66.7875 34.4403C77.1787 44.8809 99.1073 46.5509 101.75 60.5178C104.036 72.602 90.2338 88.631 76.9547 88.175C60.4167 87.6071 57.3448 58.0931 40.7994 58.4248C23.5952 58.7696 17.5736 98.7696 3.48508 89.6477C-10.5229 80.5779 22.1144 63.0871 23.7117 47.361C24.3947 40.6367 10.5635 39.4217 9.26158 32.7757C7.79684 25.2989 11.2277 17.2952 16.7119 11.6296C22.8787 5.25863 31.6704 -1.21159 40.7994 0.194309Z"
+                    fill="#B94D4D"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="section about" id="about-section">
+        <div class="main-container">
+          <h1 class="section-title">about</h1>
+          <p class="section-subtitle">Who is Rhowen?</p>
+          <div class="grid-container">
+            <div class="about__text">
+              <p class="about__name">I'm Rhowen "Owen" Enguerra</p>
+              <p class="about__text-paragraph">
+                I'm an Information Technology Fresh Graduate interested in Web
+                Development. I love how ideas turn into realities and how the
+                web puts magic on top of it.
+              </p>
+              <p>
+                My passion and interest in Web Development brought me to pursue
+                a professional career in it. Currently, I'm looking for an
+                opportunity to use the skills I'm passionate about.
+              </p>
+            </div>
+            <div class="about__skills">
+              <h2>My tool box</h2>
+              <ul class="about__list">
+                <li><img src="img/html.png" alt="html logo" /> HTML</li>
+                <li><img src="img/css-3.png" alt="css-3 logo" /> CSS</li>
+                <li>
+                  <img src="img/js.png" alt="javascript logo" /> JavaScript
+                </li>
+                <li><img src="img/php.png" alt="php logo" /> PHP</li>
+                <li>
+                  <img src="img/laravel.png" alt="laravel logo" /> Laravel
+                </li>
+                <li>
+                  <img src="img/bootstrap.png" alt="bootstrap logo" /> Bootstrap
+                </li>
+                <li><img src="img/figma.png" alt="figma logo" /> Figma</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section class="section projects" id="projects-section">
+        <div class="main-container">
+          <h1 class="section-title">projects</h1>
+          <p class="section-subtitle">
+            I've built several websites and applications. Here are the some of
+            them
+          </p>
+          <div class="grid-container">
+            <div class="projects__container">
+              <div class="projects__is-column-right">
+                <img
+                  srcset="
+                    img/personal-website-small.png 1200w,
+                    img/personal-website-large.png 2560w
+                  "
+                  sizes="(min-width: 769px) 87vw, (min-width: 1020px) 43vw, 646px"
+                  alt="project mockup"
+                  src="img/project-1-large.png"
+                />
+              </div>
+              <div class="projects__is-column-left">
+                <h2>Personal Website</h2>
+                <p>
+                  This is my portfolio website. Built with CSS Flexbox and Grid
+                  for layout. Built this from scratch using HTML, CSS, SASS, and
+                  JavaScript.
+                </p>
+                <div class="projects__button-group">
+                  <a
+                    class="projects__btn-for-website button-primary"
+                    href="https://deguzman.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Website
+                    <i class="fa fa-external-link"></i>
+                  </a>
+                  <a
+                    class="projects__btn-for-code button-primary"
+                    href="https://github.com/shainadeguzman/personal-website"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Source Code
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- OTHER PROJECTS -->
+            <div class="projects-2__container">
+              <h1 class="projects-2__title">Other Projects</h1>
+              <div>
+                <!-- <figure class="projects-2__box">
+                  <div class="projects-2__image">
+                    <img
+                      srcset="
+                        img/rating-component-small.png 1280w,
+                        img/rating-component.png       2560w
+                      "
+                      sizes="(min-width: 769px) 3vw, (min-width: 1020px) 5vw, 390px"
+                      alt="project screenshot"
+                      src="img/pen-1.png"
+                    />
+                  </div>
+                  <div class="projects-2__info">
+                    <h2>Rating Component</h2>
+                    <div class="projects-2__links">
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/shainadeguzman/interactive-rating-component"
+                        ><i class="fab fa-github icon"></i
+                      ></a>
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://shainadeguzman.github.io/interactive-rating-component/"
+                        ><i class="fa fa-external-link icon"></i
+                      ></a>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="projects-2__box">
+                  <div class="projects-2__image">
+                    <img
+                      srcset="
+                        img/tip-calcu-small.png 1280w,
+                        img/tip-calcu.png       2560w
+                      "
+                      sizes="(min-width: 769px) 3vw, (min-width: 1020px) 5vw, 390px"
+                      alt="project screenshot"
+                      src="img/pen-2.png"
+                    />
+                  </div>
+                  <div class="projects-2__info">
+                    <h2>Tip Calculator</h2>
+                    <div class="projects-2__links">
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/shainadeguzman/tip-calculator"
+                        ><i class="fab fa-github icon"></i
+                      ></a>
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://shainadeguzman.github.io/tip-calculator/"
+                        ><i class="fa fa-external-link icon"></i
+                      ></a>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="projects-2__box">
+                  <div class="projects-2__image">
+                    <img
+                      srcset="
+                        img/todo-app-small.png 1280w,
+                        img/todo-app.png       2560w
+                      "
+                      sizes="(min-width: 769px) 3vw, (min-width: 1020px) 5vw, 390px"
+                      alt="project screenshot"
+                      src="img/pen-3.png"
+                    />
+                  </div>
+                  <div class="projects-2__info">
+                    <h2>Todo App</h2>
+                    <div class="projects-2__links">
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/shainadeguzman/todo-list-app"
+                        ><i class="fab fa-github icon"></i
+                      ></a>
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://shainadeguzman.github.io/todo-list-app/"
+                        ><i class="fa fa-external-link icon"></i
+                      ></a>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="projects-2__box">
+                  <div class="projects-2__image">
+                    <img
+                      srcset="
+                        img/social-proof-small.png 1280w,
+                        img/social-proof.png       2560w
+                      "
+                      sizes="(min-width: 769px) 3vw, (min-width: 1020px) 5vw, 390px"
+                      alt="project screenshot"
+                      src="img/social-proof.png"
+                    />
+                  </div>
+                  <div class="projects-2__info">
+                    <h2>Social Proof Section</h2>
+                    <div class="projects-2__links">
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/shainadeguzman/social-proof-section"
+                        ><i class="fab fa-github icon"></i
+                      ></a>
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://shainadeguzman.github.io/social-proof-section/"
+                        ><i class="fa fa-external-link icon"></i
+                      ></a>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="projects-2__box">
+                  <div class="projects-2__image">
+                    <img
+                      srcset="
+                        img/sign-up-form-small.png 1280w,
+                        img/sign-up-form.png       2560w
+                      "
+                      sizes="(min-width: 769px) 3vw, (min-width: 1020px) 5vw, 390px"
+                      alt="project screenshot"
+                      src="img/sign-up-form.png"
+                    />
+                  </div>
+                  <div class="projects-2__info">
+                    <h2>Sign up Form</h2>
+                    <div class="projects-2__links">
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/shainadeguzman/intro-component-with-signup-form"
+                        ><i class="fab fa-github icon"></i
+                      ></a>
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://shainadeguzman.github.io/intro-component-with-signup-form/"
+                        ><i class="fa fa-external-link icon"></i
+                      ></a>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="projects-2__box">
+                  <div class="projects-2__image">
+                    <img
+                      srcset="
+                        img/order-summary-small.png  700w,
+                        img/order-summary.png       1440w
+                      "
+                      sizes="(min-width: 769px) 3vw, (min-width: 1020px) 5vw, 390px"
+                      alt="project screenshot"
+                      src="img/order-summary.png"
+                    />
+                  </div>
+                  <div class="projects-2__info">
+                    <h2>Order Summary Card</h2>
+                    <div class="projects-2__links">
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/shainadeguzman/order-summary-component"
+                        ><i class="fab fa-github icon"></i
+                      ></a>
+                      <a
+                        class="projects-2__btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://shainadeguzman.github.io/order-summary-component/"
+                        ><i class="fa fa-external-link icon"></i
+                      ></a>
+                    </div>
+                  </div>
+                </figure> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="section contact" id="contact-section">
+        <div class="main-container">
+          <h1 class="section-title">contact</h1>
+          <p class="section-subtitle">
+            Got a question or just want to say hello? Go ahead.
+          </p>
+          <div class="grid-container">
+            <div class="contact__info-content">
+              <ul class="contact__info-list">
+                <li>
+                  <i class="fas fa-envelope"></i>
+                  <div>
+                    <h3>Email</h3>
+                    <p>enguerraowen@gmail.com</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="contact__form-content">
+              <form method="POST" data-netlify="true" class="contact__form">
+                <div class="contact__form-row">
+                  <div class="contact__input contact__input-name">
+                    <label for="name">Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="contact__name"
+                      placeholder="Your name"
+                    />
+                    <span class="contact__error-msg name__error"></span>
+                  </div>
+                  <div class="contact__input">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="contact__email"
+                      placeholder="Your email"
+                    />
+                    <span class="contact__error-msg email__error"></span>
+                  </div>
+                </div>
+                <div class="contact__input">
+                  <label for="message">Message</label>
+                  <textarea
+                    name="message"
+                    placeholder="Your message here..."
+                    class="contact__message"
+                  ></textarea>
+                  <span class="contact__error-msg message__error"></span>
+                </div>
+                <div class="contact__button btn">
+                  <input type="submit" name="submit" value="Submit" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="main-container">
+          <div class="grid-container">
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 250 59.9"
+              enable-background="new 0 0 250 59.9"
+              xml:space="preserve"
+              class="footer__logo"
+              title="logo"
+            >
+              <path
+                d="M57.1921 47.4888C45.592 56.2692 29.412 56.199 17.8912 47.3183L26.3351 43.4271C26.7372 43.2413 27.1232 43.0234 27.4891 42.7755C27.6001 42.7004 27.7112 42.622 27.8171 42.5401C28.736 41.8488 29.4925 40.9708 30.0348 39.9659C30.4447 39.1938 30.7171 38.3583 30.8399 37.4958C30.9247 36.9361 30.9676 36.3711 30.9684 35.8053C30.9684 35.215 30.9527 34.6248 30.9319 34.0346C30.9198 33.649 30.9094 33.2618 30.9041 32.8763C30.8972 32.3361 30.8914 31.7953 30.8868 31.254L31.2339 31.4246L32.1362 31.8834L32.5544 31.9534L37.3924 32.762L42.7926 33.6661L42.9558 39.1249L43.0096 40.9093L43.0356 41.7758V41.8287L43.2091 41.9004L45.1301 42.668L57.1921 47.4888Z"
+                fill="#F2A196"
+              />
+              <path
+                d="M43.0338 41.8287C42.4374 41.9296 41.8238 41.8362 41.2864 41.5626L30.9319 33.243C30.9198 32.8575 30.9093 33.2601 30.9041 32.8746C30.8972 32.3344 30.8914 31.7936 30.8868 31.2523L31.2338 31.4228L32.1362 31.8817L32.5544 31.9517L37.3924 32.7603L42.7926 33.6644L42.9558 39.1232L43.0095 40.9076L43.0356 41.7741V41.8287H43.0338Z"
+                fill="#E88870"
+              />
+              <path
+                d="M57.1921 47.4889C45.592 56.2693 29.412 56.199 17.8912 47.3183L26.3351 43.4272C26.7372 43.2413 27.1232 43.0234 27.4891 42.7755C27.6001 42.7005 27.7112 42.622 27.8171 42.5401C31.9037 45.3992 37.4809 47.2023 42.305 45.0682C43.4538 44.5565 44.5089 43.7308 45.1336 42.6697L57.1921 47.4889Z"
+                fill="url(#paint0_linear_10_17)"
+              />
+              <path
+                d="M54.0859 13.3234C54.0703 13.4241 54.0512 13.523 54.0287 13.622C53.9083 14.1291 53.7149 14.6168 53.4543 15.0703L53.4404 15.0942C53.3415 15.2647 53.2357 15.4353 53.1211 15.6059C52.8173 16.0438 52.4857 16.4626 52.1285 16.8597L51.9151 17.0934C51.7711 17.2521 51.6253 17.4073 51.4795 17.5609C52.2517 17.3903 52.9997 18.0982 53.1367 18.8624C53.2738 19.6267 52.9632 20.3977 52.5797 21.0801C51.9082 22.2879 50.9399 23.0913 50.0878 24.1404C49.4492 24.9217 49.0952 25.8463 48.3994 26.5935L48.3473 26.6498C46.5097 28.5467 43.6082 28.9903 41.1927 29.8006C40.3251 30.094 30.9163 32.721 30.9163 33.2942C30.9163 33.1697 29.9949 32.2707 28.8339 31.1772C24.6692 27.2895 23.3001 21.2831 25.7781 16.1313C28.4418 10.5872 34.491 6.63127 40.2522 4.73092C42.0534 4.13727 44.0976 3.73809 45.8051 4.56033C47.5127 5.38256 48.3629 7.93286 46.9469 9.17815C47.8376 8.51574 48.9453 8.19932 50.0583 8.28939C51.0864 8.3527 52.0559 8.78136 52.7862 9.49545C53.3647 10.0668 53.7806 10.7773 53.9922 11.5562C54.1491 12.1323 54.1811 12.7344 54.0859 13.3234V13.3234Z"
+                fill="#845161"
+              />
+              <path
+                d="M54.0859 13.3234C54.0703 13.4241 54.0512 13.523 54.0286 13.622C54.013 13.651 53.9974 13.6817 53.9818 13.7158C53.7857 14.1559 53.6955 14.6302 53.4612 15.0703L53.4473 15.0942C53.3484 15.2647 53.2426 15.4353 53.128 15.6059C52.8271 16.046 52.4954 16.4649 52.1354 16.8597L51.9151 17.0934C51.771 17.2521 51.6253 17.4073 51.4795 17.5609C52.2517 17.3903 52.9996 18.0982 53.1367 18.8624C53.2738 19.6267 52.9632 20.3977 52.5797 21.0801C51.9081 22.2879 50.9398 23.0913 50.0878 24.1404C49.4492 24.9217 49.0952 25.8463 48.3994 26.5935C47.5915 25.6491 47.077 24.4961 46.9174 23.2722C46.6328 21.0102 46.8064 18.5451 46.7283 16.2559C46.6797 14.8161 46.2077 14.55 47.0857 13.3849C47.7918 12.5285 48.6085 11.7664 49.5151 11.1177C50.2231 10.6589 51.1342 10.5872 51.9793 10.7049C52.7156 10.8039 53.4105 11.0988 53.9887 11.5579C54.1465 12.1332 54.1797 12.7347 54.0859 13.3234Z"
+                fill="#69303A"
+              />
+              <ellipse
+                cx="29.1792"
+                cy="26.4758"
+                rx="2.95"
+                ry="2.9"
+                fill="#F2A196"
+              />
+              <ellipse
+                cx="30.1146"
+                cy="26.4758"
+                rx="2.64112"
+                ry="2.59635"
+                fill="#E88870"
+              />
+              <path
+                d="M30.1545 23.7464L30.918 33.4699L42.4473 40.0921C44.0997 40.698 45.9502 39.9736 46.7265 38.417C48.3855 35.0769 51.0474 29.8023 50.6969 27.8405C50.1763 24.9405 48.7881 23.917 48.7881 23.917C48.9813 22.7797 49.1733 21.6459 49.3642 20.5154C49.5828 19.2343 49.8622 17.8969 49.5377 16.609C49.1681 15.1317 48.0332 14.5022 47.0996 13.3985C44.6425 16.51 40.6027 18.2688 37.0748 20.0514C35.2562 20.9794 30.1545 23.7464 30.1545 23.7464Z"
+                fill="#F2A196"
+              />
+              <path
+                d="M38.6782 23.3711C39.7368 23.3711 39.7368 24.9712 38.6782 24.9797H38.6297C37.5711 24.9797 37.5711 23.3796 38.6297 23.3711H38.6782Z"
+                fill="#00214E"
+              />
+              <path
+                d="M47.3755 23.134C48.3594 23.1425 48.3594 24.6181 47.3755 24.6266H47.3322C46.35 24.6266 46.35 23.1425 47.3322 23.134H47.3755Z"
+                fill="#00214E"
+              />
+              <path
+                d="M43.0877 22.9088C43.0738 22.9685 45.406 29.0722 45.406 29.0722L42.2929 29.2206"
+                stroke="#00214E"
+              />
+              <path
+                d="M35.7161 21.7283C37.3226 21.4022 38.9749 21.3566 40.5975 21.5936"
+                stroke="#00214E"
+              />
+              <path
+                d="M45.963 21.7471C46.9549 21.5209 47.977 21.4513 48.9911 21.5407"
+                stroke="#00214E"
+              />
+              <path
+                d="M39.1034 30.9282C39.151 30.8532 39.2284 30.8012 39.3168 30.785C39.4053 30.7688 39.4965 30.7898 39.5684 30.8429C39.9294 31.0919 40.5888 31.6207 41.5259 31.8033C42.803 32.054 43.9102 31.5508 44.1757 31.8749C44.3249 32.0574 44.1427 32.2792 43.7939 32.5573C43.0555 33.0996 42.1259 33.3265 41.2152 33.1867C39.9867 32.9599 39.0635 31.561 39.0635 31.0646C39.0648 31.0165 39.0785 30.9696 39.1034 30.9282V30.9282Z"
+                fill="white"
+              />
+              <path
+                d="M72.75 30.8C72.75 28.2 73.15 25.9 73.95 23.9C74.7833 21.9 75.9 20.2333 77.3 18.9C78.7333 17.5333 80.4 16.5 82.3 15.8C84.2333 15.1 86.3167 14.75 88.55 14.75C90.7833 14.75 92.85 15.1 94.75 15.8C96.6833 16.5 98.3667 17.5333 99.8 18.9C101.233 20.2333 102.35 21.9 103.15 23.9C103.983 25.9 104.4 28.2 104.4 30.8C104.4 33.4 104 35.7167 103.2 37.75C102.4 39.75 101.283 41.4333 99.85 42.8C98.45 44.1333 96.7833 45.15 94.85 45.85C92.9167 46.55 90.8167 46.9 88.55 46.9C86.2833 46.9 84.1833 46.55 82.25 45.85C80.3167 45.1167 78.65 44.0667 77.25 42.7C75.85 41.3333 74.75 39.65 73.95 37.65C73.15 35.65 72.75 33.3667 72.75 30.8ZM81.75 30.8C81.75 33.8333 82.3667 36.1 83.6 37.6C84.8333 39.1 86.4833 39.85 88.55 39.85C90.65 39.85 92.3167 39.1 93.55 37.6C94.7833 36.1 95.4 33.8333 95.4 30.8C95.4 27.8 94.7833 25.55 93.55 24.05C92.35 22.55 90.7 21.8 88.6 21.8C86.5333 21.8 84.8667 22.55 83.6 24.05C82.3667 25.5167 81.75 27.7667 81.75 30.8ZM128.406 23.1C128.773 22.9333 129.34 22.75 130.106 22.55C130.906 22.3167 131.706 22.2 132.506 22.2C133.906 22.2 135.073 22.4167 136.006 22.85C136.94 23.25 137.506 23.85 137.706 24.65C138.073 26.0167 138.406 27.3 138.706 28.5C139.04 29.6667 139.356 30.8 139.656 31.9C139.956 32.9667 140.24 34.0333 140.506 35.1C140.806 36.1667 141.09 37.2833 141.356 38.45H141.606C141.906 36.4167 142.173 34.4833 142.406 32.65C142.64 30.7833 142.856 28.9667 143.056 27.2C143.256 25.4 143.456 23.6333 143.656 21.9C143.856 20.1333 144.056 18.35 144.256 16.55C145.49 15.85 146.806 15.5 148.206 15.5C149.44 15.5 150.506 15.7667 151.406 16.3C152.306 16.8333 152.756 17.7333 152.756 19C152.756 19.7333 152.673 20.7833 152.506 22.15C152.373 23.4833 152.173 24.9833 151.906 26.65C151.673 28.3167 151.39 30.0667 151.056 31.9C150.723 33.7333 150.373 35.4833 150.006 37.15C149.64 38.8167 149.256 40.3333 148.856 41.7C148.49 43.0333 148.14 44.0667 147.806 44.8C147.306 45.2667 146.49 45.65 145.356 45.95C144.223 46.25 143.056 46.4 141.856 46.4C140.29 46.4 138.956 46.2 137.856 45.8C136.79 45.3667 136.14 44.7667 135.906 44C135.473 42.6667 135.006 41.0833 134.506 39.25C134.006 37.4167 133.473 35.4 132.906 33.2C132.44 35.3667 131.956 37.4833 131.456 39.55C130.956 41.6167 130.506 43.3667 130.106 44.8C129.606 45.2667 128.856 45.65 127.856 45.95C126.856 46.25 125.756 46.4 124.556 46.4C123.056 46.4 121.69 46.2 120.456 45.8C119.256 45.3667 118.473 44.7667 118.106 44C117.806 43.4 117.473 42.5167 117.106 41.35C116.773 40.15 116.423 38.8 116.056 37.3C115.69 35.7667 115.306 34.1167 114.906 32.35C114.54 30.5833 114.19 28.8167 113.856 27.05C113.556 25.2833 113.273 23.5667 113.006 21.9C112.74 20.2 112.54 18.65 112.406 17.25C112.873 16.8167 113.523 16.4167 114.356 16.05C115.19 15.6833 116.09 15.5 117.056 15.5C118.323 15.5 119.356 15.7833 120.156 16.35C120.99 16.8833 121.506 17.8 121.706 19.1C122.24 22.5 122.673 25.3333 123.006 27.6C123.373 29.8667 123.656 31.7333 123.856 33.2C124.09 34.6333 124.256 35.75 124.356 36.55C124.456 37.35 124.556 37.9833 124.656 38.45H124.906C125.206 37.1167 125.49 35.8833 125.756 34.75C126.023 33.6167 126.29 32.4833 126.556 31.35C126.856 30.1833 127.156 28.95 127.456 27.65C127.756 26.3167 128.073 24.8 128.406 23.1ZM222.413 44.95C221.946 45.4167 221.263 45.7667 220.363 46C219.496 46.2667 218.446 46.4 217.213 46.4C215.98 46.4 214.813 46.2167 213.713 45.85C212.613 45.4833 211.713 44.6 211.013 43.2L206.063 33.1C205.563 32.0667 205.113 31.1 204.713 30.2C204.313 29.2667 203.88 28.2 203.413 27L203.113 27.05C203.246 28.85 203.313 30.6833 203.313 32.55C203.346 34.4167 203.363 36.25 203.363 38.05V45.8C202.996 45.9 202.43 46 201.663 46.1C200.93 46.2 200.196 46.25 199.463 46.25C198.73 46.25 198.08 46.2 197.513 46.1C196.946 46 196.48 45.8 196.113 45.5C195.746 45.2 195.463 44.8 195.263 44.3C195.063 43.7667 194.963 43.0833 194.963 42.25V17.25C195.43 16.5833 196.146 16.0833 197.113 15.75C198.08 15.4167 199.113 15.25 200.213 15.25C201.446 15.25 202.613 15.45 203.713 15.85C204.846 16.2167 205.746 17.0833 206.413 18.45L211.413 28.55C211.913 29.5833 212.363 30.5667 212.763 31.5C213.163 32.4 213.596 33.45 214.063 34.65L214.313 34.6C214.18 32.8 214.096 31 214.063 29.2C214.03 27.4 214.013 25.6 214.013 23.8V15.7C214.38 15.6 214.93 15.5 215.663 15.4C216.43 15.3 217.18 15.25 217.913 15.25C219.38 15.25 220.496 15.5167 221.263 16.05C222.03 16.55 222.413 17.6167 222.413 19.25V44.95Z"
+                fill="white"
+              />
+              <path
+                d="M162.57 20.35C162.57 18.9167 162.987 17.7833 163.82 16.95C164.654 16.1167 165.787 15.7 167.22 15.7H183.72C183.954 16.0667 184.154 16.55 184.32 17.15C184.52 17.75 184.62 18.3833 184.62 19.05C184.62 20.3167 184.337 21.2167 183.77 21.75C183.237 22.2833 182.52 22.55 181.62 22.55H171.07V27.2H182.32C182.554 27.5667 182.754 28.05 182.92 28.65C183.12 29.2167 183.22 29.8333 183.22 30.5C183.22 31.7667 182.954 32.6667 182.42 33.2C181.887 33.7333 181.17 34 180.27 34H171.07V39.25H183.92C184.154 39.6167 184.354 40.1 184.52 40.7C184.72 41.3 184.82 41.9333 184.82 42.6C184.82 43.8667 184.537 44.7833 183.97 45.35C183.437 45.8833 182.72 46.15 181.82 46.15H167.22C165.787 46.15 164.654 45.7333 163.82 44.9C162.987 44.0667 162.57 42.9333 162.57 41.5V20.35Z"
+                fill="#5A7CCD"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_10_17"
+                  x1="17.8912"
+                  y1="54.0255"
+                  x2="57.1921"
+                  y2="54.0255"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#16243F" />
+                  <stop offset="1" stop-color="#6878B1" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <p class="footer__text">
+              An Information Technology Fresh Graduate interested in building
+              Web System and Applications.
+            </p>
+            <div class="footer__row">
+              <p>
+                Copyright &copy; 2022. Created by
+                <a class="home-link" href="index.html"
+                  >Rhowen "Owen" Enguerra</a
+                >
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/ow3ndesu/ow3ndesu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i title="Github" class="fab fa-github"></i
+                  ></a>
+                </li>
+                <!-- <li>
+                  <a
+                    href="https://www.linkedin.com/in/shainadeguzman"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i title="LinkedIn" class="fab fa-linkedin-in"></i
+                  ></a>
+                </li> -->
+                <li>
+                  <a
+                    href="https://web.facebook.com/ow3ndesu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i title="Facebook" class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/animation.js"></script>
+  </body>
+</html>

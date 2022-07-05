@@ -1,0 +1,235 @@
+.projects {
+  padding: 10rem 0;
+  line-height: 1.6;
+
+  @include respond-to(medium) {
+    padding: $section-padding;
+  }
+
+  &__container {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem 0;
+    margin-bottom: 6rem;
+  }
+
+  &__is-column-right {
+    flex-basis: calc(100% / 2);
+    transition: transform 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s,
+      opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s,
+      box-shadow $transition ease-in-out;
+    border-radius: 6px;
+    border: 1px solid $light-gray;
+  }
+
+  &__is-column-right:hover {
+    box-shadow: 1px 1px 15px $light-gray;
+  }
+
+  &__is-column-left {
+    flex-basis: calc(100% / 2);
+    transition: transform 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s,
+      opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  }
+
+  &__is-column-left,
+  &__is-column-right {
+    backface-visibility: hidden;
+    transform: translateY(40%);
+    opacity: 0;
+  }
+
+  &__is-column-left.reveal,
+  &__is-column-right.reveal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &__is-column-right img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &__is-column-left h2 {
+    font-weight: 600;
+    color: $dark-blue;
+    font-size: $font-section-sub-headers-medium;
+    margin-bottom: 1.2rem;
+
+    @include respond-to(large) {
+      font-size: $font-section-sub-headers-large;
+    }
+  }
+
+  &__is-column-left p {
+    font-size: $font-content-medium;
+    margin-bottom: 2.6rem;
+
+    @include respond-to(large) {
+      font-size: $font-content-large;
+    }
+  }
+
+  &__btn-for-website,
+  &__btn-for-code {
+    margin-right: 2rem;
+    font-size: 1.2rem;
+
+    @include respond-to(large) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__btn-for-website i,
+  &__btn-for-code i {
+    margin-left: 1.4rem;
+  }
+
+  &__button-group {
+    display: flex;
+  }
+
+  &__button-group a {
+    padding: 0.6rem 1.2rem;
+
+    @include respond-to(medium) {
+      padding: 0.6rem 1.4rem;
+    }
+  }
+
+  // OTHER PROJECTS
+  &-2__container {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  &-2__title {
+    text-align: center;
+    margin-bottom: 2.6rem;
+    font-size: $font-section-sub-headers-medium;
+    color: $dark-blue;
+
+    @include respond-to(large) {
+      font-size: $font-section-sub-headers-large;
+    }
+  }
+
+  &-2__container > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 3rem;
+    row-gap: 5rem;
+    justify-content: center;
+
+    @include respond-to(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &-2__box {
+    border-radius: 5px;
+    padding: 1.4rem;
+    border: 1px solid $light-gray;
+    backface-visibility: hidden;
+    transform: translateY(40%);
+    opacity: 0;
+    transition: transform 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s,
+      opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s,
+      box-shadow $transition ease-in-out;
+  }
+
+  &-2__box.reveal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &-2__box:hover {
+    box-shadow: 1px 1px 15px $light-gray;
+  }
+
+  &-2__image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  &-2__box img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  &-2__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-2__info h2 {
+    font-size: $font-content-medium;
+    color: $dark-blue;
+    font-weight: 500;
+
+    @include respond-to(large) {
+      font-size: $font-content-large;
+    }
+  }
+
+  &-2__btn {
+    text-decoration: none;
+    color: $dark-blue;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform $transition ease;
+  }
+
+  &-2__btn:hover {
+    transform: translateY(-0.3rem);
+  }
+
+  &-2__btn .icon {
+    font-size: 2rem;
+  }
+
+  &-2__btn:first-child {
+    margin-right: 1.6rem;
+  }
+
+  // 780px
+  @media (min-width: 48.75em) {
+    &__container {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: center;
+      gap: 0 4rem;
+    }
+
+    &__container:nth-child(even) &__is-column-right {
+      order: 2;
+      flex-basis: 100%;
+    }
+
+    &__container:nth-child(even) &__is-column-left {
+      order: 1;
+      flex-basis: 100%;
+    }
+
+    &__container {
+      margin-bottom: 12rem;
+    }
+  }
+
+  @media (max-width: 20em) {
+    .projects__btn-for-website {
+      margin-right: 1rem;
+    }
+  }
+}
